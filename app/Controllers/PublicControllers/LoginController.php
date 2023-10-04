@@ -28,7 +28,8 @@ class LoginController extends BaseController {
         if ( password_verify($password, $dataUser[0]['user_strPassword']) ) {
 
             $data = [
-                "user" => $dataUser[0]['user_strName'], 
+                "user" => $dataUser[0]['user_strName'],
+                "id" => $dataUser[0]['user_id'],
                 "type" => 'admin',
             ];
 
