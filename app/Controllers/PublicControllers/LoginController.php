@@ -8,10 +8,13 @@ use App\Controllers\BaseController;
 class LoginController extends BaseController {
   public function login(): string {
     $navbar = view('public/components/navbar/navbar');
-    $login = view('public/login/login');
+    $loginCard = view('public/login/components/login-card');
 
-    $view = $navbar.$login;
-    return $this->loadView($view);
+    $data['navbar'] = $navbar;
+    $data['loginCard'] = $loginCard;
+
+    $login = view('public/login/login', $data);
+    return $this->loadView($login);
   }
 
   public function loginPost() {

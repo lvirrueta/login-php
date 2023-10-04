@@ -5,9 +5,12 @@ use App\Controllers\BaseController;
 
 class HomeController extends BaseController {
     public function admin(): string {
-        // $navbar = view('');
-        $view = view('user/home/home');
-        return $this->loadView($view);
+        $navbar = view('user/components/navbar/navbar');
+
+        $data['navbar'] = $navbar;
+
+        $home = view('user/home/home', $data);
+        return $this->loadView($home);
     }
 
     public function logout() {

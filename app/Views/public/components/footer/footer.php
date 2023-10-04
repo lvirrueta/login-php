@@ -1,6 +1,13 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="<?php echo base_url('/') ?>">App</a>
-    <!-- <a class="btn btn-outline-success" href="<?php echo base_url('/login') ?>">Login</a> -->
-  </div>
-</nav>
+<style>
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+</style>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
