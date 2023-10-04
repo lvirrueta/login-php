@@ -7,10 +7,10 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 // Public
-$routes->get('/', 'Home::index');
-$routes->get('/login', 'Home::login');
-$routes->post('/login', 'Home::loginPost');
+$routes->get('/', 'PublicControllers\LandingController::index');
+$routes->get('/login', 'PublicControllers\LoginController::login');
+$routes->post('/login', 'PublicControllers\LoginController::loginPost');
 
 // User
-$routes->get('/admin', 'Home::admin');
-$routes->get('/logout', 'Home::logout');
+$routes->get('/admin', 'UserControllers\HomeController::admin');
+$routes->get('/logout', 'UserControllers\HomeController::logout');
